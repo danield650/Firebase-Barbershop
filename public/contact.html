@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+    <header class="header">
+        <div class="container container-nav">
+            <div class="site-title">
+                <h1>Daniel's Barbershop</h1>
+                <p class="subtitle">Getting your hair ready</p>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="home.html">Acasa</a></li>
+                    <li><a href="gallery.html">Galerie</a></li>
+                    <li><a href="team.html">Echipa</a></li>
+                    <li><a href="about.html">Despre</a></li>
+                    <li><a href="contact.html" class="current-page">Contact</a></li>
+                </ul>
+
+            </nav>
+        </div>
+    </header>
+    <main class="contact">
+        <h1>Contact Us</h1>
+        <div class="flex-container">
+            <div class="flex-item-left">
+                <h4>We are located at</h4>
+                <p>Strada Gârlești 9</p>
+                <p>Craiovistan, Romania</p>
+                <h4>Phone</h4>
+                <p>0771036543</p>
+                <h4>Email</h4>
+                <p>danciu.daniel650@gmail.com</p>
+            </div>
+            <div class="flex-item-right">
+                <form action="">
+                    <input type="text" id="fname" placeholder="Your Name">
+                    <input type="text" name="subject" id="subject" placeholder="Subject">
+                    <textarea name="" id="textarea" cols="30" rows="10"></textarea>
+                    <button type="button" id="sendBtn">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </main>
+    <footer class="footer">
+        <h3><span id="demo">&copy;</span><a href="#">Daniel'sbarbershop.com</a></h3>
+    </footer>
+
+    
+</body>
+
+<script type="module">
+    // Import the functions you need from the SDKs you need
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/9.22.1/firebase-app.js";
+    import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.22.1/firebase-database.js";
+    // TODO: Add SDKs for Firebase products that you want to use
+    // https://firebase.google.com/docs/web/setup#available-libraries
+  
+    // Your web app's Firebase configuration
+    // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+    const firebaseConfig = {
+      apiKey: "AIzaSyChOz6x-x1eaRFRDRNpeeSl49mByWwlsu8",
+      authDomain: "barber-shop-959eb.firebaseapp.com",
+      databaseURL: "https://barber-shop-959eb-default-rtdb.europe-west1.firebasedatabase.app",
+      projectId: "barber-shop-959eb",
+      storageBucket: "barber-shop-959eb.appspot.com",
+      messagingSenderId: "569027161546",
+      appId: "1:569027161546:web:75b4922396e83b4338b333",
+      measurementId: "G-DFH8DCXX61"
+    };
+  
+    // Initialize Firebase
+    const app = initializeApp(firebaseConfig);
+    const database = getDatabase(app);
+
+    const fname = document.getElementById("f_name");
+    const subject = document.getElementById("subject");
+    const textarea = document.getElementById("textarea");
+
+    const sendBtn = document.getElementById("sendBtn");
+
+    
+
+
+
+  </script>
+
+
+</html>
